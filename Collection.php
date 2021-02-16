@@ -19,5 +19,10 @@ class Collection
         $newArr = array_map($cb, $this->collection);
         return new Collection($newArr);
     }
-
+    
+    public function forEach($cb) {
+        foreach ($this->collection as $key => $value) {
+            $cb($value, $key);
+        }
+    }
 }
