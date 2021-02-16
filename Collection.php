@@ -41,7 +41,9 @@ class Collection
     public function reduce($cb, $init = null)
     {
         $newArr = array_reduce($this->collection, $cb, $init);
-        return new Collection($newArr);
+        if (is_array($newArr))
+            return new Collection($newArr);
+        return $newArr;
     }
 
 }
