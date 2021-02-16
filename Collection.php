@@ -14,12 +14,11 @@ class Collection
         $this->collection = $collection;
     }
 
-    public function map($cb)
+    public function map($cb, ...$arr)
     {
-        $newArr = array_map($cb, $this->collection);
+        $newArr = array_map($cb, $this->collection, ...$arr);
         return new Collection($newArr);
     }
-    
     public function forEach($cb) {
         foreach ($this->collection as $key => $value) {
             $cb($value, $key);
