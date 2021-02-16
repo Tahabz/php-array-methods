@@ -1,5 +1,5 @@
 # php-array-methods
-A class that helps chaining array methods for a cleaner arrays manipulation.
+A class that helps chaining array methods for cleaner arrays manipulation.
 
 # Examples:
 
