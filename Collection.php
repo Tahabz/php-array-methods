@@ -38,4 +38,10 @@ class Collection
         return new Collection($newArr);
     }
 
+    public function reduce($cb, $init = null)
+    {
+        $newArr = array_reduce($this->collection, $cb, $init);
+        return new Collection($newArr);
+    }
+
 }
