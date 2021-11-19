@@ -12,9 +12,7 @@ $arr = new Collection([1, 2, 3, 4, 6, 8, 7, 10, 11, 12, 14]);
 
 $newArr = $arr
     ->filter(function ($value) {
-        if ($value % 2 === 0)
-            return true;
-        return false;
+        return ($value % 2 === 0);
     })
     ->map(fn ($v) => $v + 100)
     ->reduce(function ($acc, $val) {
