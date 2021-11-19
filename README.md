@@ -20,6 +20,6 @@ $newArr = $arr
         return $acc;
     });
 
-print_r($arr->getCollection()); // 756
+print_r($newArr->getCollection()); // 756
 
 ```
